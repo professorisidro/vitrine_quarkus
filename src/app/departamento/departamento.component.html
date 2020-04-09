@@ -1,0 +1,25 @@
+<div *ngIf="isloading" id="loadercontainer">
+    <div class="loader">
+    </div>
+</div>
+
+<div *ngIf="!isloading">
+
+
+    <div class="container-fluid padding">
+        <div class="row">
+            <div class="col-12">
+                <h5 class="text-center"> Departamentos da Vitrine </h5>
+            </div>
+
+        </div>
+        <hr/>
+        <div class="row" *ngFor="let ITEM of deptoList">
+            <div class="col-12 detalhe">
+                <h3>{{ITEM.nome}}</h3>
+                <p>{{ITEM.descricao}}</p>
+
+            </div>
+        </div>
+    </div>
+</div>

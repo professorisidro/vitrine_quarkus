@@ -1,0 +1,35 @@
+<div *ngIf="isloading" id="loadercontainer">
+    <div class="loader">
+    </div>
+</div>
+
+<div *ngIf="!isloading">
+
+
+    <div class="container-fluid padding">
+        <div class="row">
+            <div class="col-12">
+                <h5 class="text-center"> Produtos </h5>
+            </div>
+
+        </div>
+        <div class="row" *ngFor="let ITEM of produtoList">
+            <div class="col-12">
+                <div class="card text-center">
+                    <div class="card-header ">
+                        <img src={{ITEM.foto1}} alt=" Card image cap ">
+                        <h4>{{ITEM.titulo}}</h4>
+                    </div>
+                    <div class="card-body ">
+                        <h5 class="card-title ">R$ {{ITEM.preco}}</h5>
+                        <p class="card-text ">{{ITEM.detalhe}}</p>
+                        <a href="# " class="btn btn-primary ">Eu quero!</a>
+                    </div>
+                    <div class="card-footer text-muted ">
+                        Departamento: {{ITEM.departamento.nome}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
